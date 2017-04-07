@@ -1,0 +1,8 @@
+{
+  "params": {
+    "Bucket": "<test-bucket-name>"
+  },
+  "accessKeyId": "<your-access-key-id>",
+  "secretAccessKey": "<your-secret-access-key>",
+  "signatureVersion": "v3"
+}
