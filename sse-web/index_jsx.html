@@ -27,7 +27,7 @@
 
     var serverSentEvents = function(){
         if(typeof(EventSource) !== "undefined") {
-            var source = new EventSource("http://localhost:8080/files/spring1",{withCredentials: true}); // create the EventSource object
+            var source = new EventSource("http://localhost:8765/notification-ms/api/stream/notifications?Authorization=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwcmluY2lwYWwiOiJueGFkbWluIiwicHJvdmlkZXIiOiJPTkVWSUVXIiwicm9sZXMiOltudWxsXSwiZXhwaXJlIjoxNDk5NTA2NTQyNzIyLCJkYnRva2VuIjoiN2I2MDUwODQtY2E0YS00MjUzLWFlNjgtM2U0NTVkZGY2ZGYzIiwiZW52IjoiZGV2IiwidGltZXN0YW1wIjoxMzg2NTIzNDY5NjQ2NTMxfQ.-ErQ31DxPomcM0x8n6n7X1N25j87WVmg-N5e8oXNX7Q",{withCredentials: true}); // create the EventSource object
             source.onmessage = function(event) { //event listener for the event source
                 console.log(event.data) // server side message is rturned as the data attribute in the event object
             };
